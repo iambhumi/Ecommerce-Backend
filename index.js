@@ -10,12 +10,12 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 
-//app.use(session({
-    //secret: 'secret-key',
-    //resave:false,
-    //saveUnintialized : false ,
-    //store: MongoStore.create({mongoUrl: 'mongodb://localhost:27017/'})
-//}));
+app.use(session({
+    secret: 'secret-key',
+    resave:false,
+    saveUnintialized : false ,
+    store: MongoStore.create({mongoUrl: 'mongodb://localhost:27017/'})
+}));
 
 //Connect to DB
 mongoose.connect('mongodb://localhost:27017/')
