@@ -23,7 +23,7 @@ mongoose.connect('mongodb://localhost:27017/')
     .catch(err => console.log(err));
 
 //Routes
-
+app.use('/api' , Router);
 
 
 
