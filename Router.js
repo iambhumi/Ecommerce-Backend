@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Controller = require('../controllers/Controller');
 
-
+router.get('/test', (req, res) => {
+    res.send('API is working!');
+  });
 //Product Routes
 router.route("/products").get(Controller.getAllProducts);
 router.route("/productsID").get(Controller.getProductByID);
